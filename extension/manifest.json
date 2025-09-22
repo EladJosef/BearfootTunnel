@@ -1,6 +1,6 @@
 {
     "name": "Bear Foot Fast Tunnel",
-    "version": "0.0.0.2",
+    "version": "1.0.0",
     "manifest_version": 3,
     "description": "A fast and secure proxy tunnel extension.",
     "permissions": [
@@ -19,7 +19,7 @@
         "128": "icons/extension-icon128x128.png"
     },
     "action": {
-        "default_popup": "popup/popup.html"
+        "default_popup": "index.html"
     },
     "content_scripts": [
         {
@@ -34,7 +34,6 @@
     "web_accessible_resources": [
         {
             "resources": [
-                "images/*.jpeg"
             ],
             "matches": [
                 "<all_urls>"

@@ -33,7 +33,7 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
 
         return true;
     }
-    else if (msg.action === 'clearProxy') {
+    else if (msg.action === 'removeProxy') {
         chrome.proxy.settings.clear({ scope: 'regular' }, () => {
             if (chrome.runtime.lastError) {
                 console.error('Error clearing proxy:', chrome.runtime.lastError);

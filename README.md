@@ -1,8 +1,8 @@
-# Bearfoot - Simple Proxy Extension
+# Bearfoot - Minimal Proxy Extension
 
 ## Overview
 
-A simple, zero-log, lightweight proxy extension with effortless setup.
+A Minimal, zero-log, lightweight proxy extension with effortless setup.
 
 ## Features
 - Easy integration with existing applications
