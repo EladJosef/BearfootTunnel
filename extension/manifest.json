@@ -1,8 +1,8 @@
 {
-    "name": "Bear Foot Fast Tunnel",
+    "name": "Bearfoot Proxy",
     "version": "1.0.0",
     "manifest_version": 3,
-    "description": "A fast and secure proxy tunnel extension.",
+    "description": "Your minimal proxy extension.",
     "permissions": [
         "clipboardRead",
         "proxy",
