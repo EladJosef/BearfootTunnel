@@ -10,10 +10,10 @@ export const getProxyConfig = async () => {
     });
 }
 
-export const connectProxy = (host: string, port: string, username: string, password: string) => {
+export const connectProxy = (type: string, host: string, port: string, username: string, password: string) => {
     chrome.storage.local.set({
         proxyConfig: {
-            type: 'http',
+            type: type,
             host: host,
             port: port,
             username: username,

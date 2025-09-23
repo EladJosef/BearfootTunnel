@@ -17,7 +17,7 @@
   let port = $state("");
   let username = $state("");
   let password = $state("");
-  let proxyType = $state("http");
+  let proxyType = $state("https");
 
   let externalIP = $state<string | null>(null);
   let userLocation = $state<string | null>(null);
@@ -64,7 +64,7 @@
   };
 
   const onConnect = (event: Event) => {
-    connectProxy(host, port, username, password);
+    connectProxy(proxyType, host, port, username, password);
     setTimeout(updateGeoLocation, 1500);
   };
 
@@ -144,18 +144,19 @@
       </Button>
       <Dropdown simple class="space-y-10 p-2 text-sm bg-gray-100">
         <li>
-          <Radio name="group1" bind:group={proxyType} value={"http"}>HTTP</Radio
-          >
+          <Radio name="group1" bind:group={proxyType} value={"http"}>
+            HTTP
+          </Radio>
         </li>
         <li>
-          <Radio name="group1" bind:group={proxyType} value={"https"}
-            >HTTPS</Radio
-          >
+          <Radio name="group1" bind:group={proxyType} value={"https"}>
+            HTTPS
+          </Radio>
         </li>
         <li>
-          <Radio name="group1" bind:group={proxyType} value={"socks5"}
-            >SOCKS5</Radio
-          >
+          <Radio name="group1" bind:group={proxyType} value={"socks5"}>
+            SOCKS5
+          </Radio>
         </li>
       </Dropdown>
     </div>

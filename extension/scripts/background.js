@@ -1,3 +1,15 @@
+chrome.storage.local.get('proxyConfig', ({ proxyConfig }) => {
+    
+    if (proxyConfig) {
+        const { username, password } = proxyConfig;
+        console.log("here");
+        chrome.webRequest.onAuthRequired.addListener(function handler(_, callback) {
+            console.log("there2");
+            callback({ authCredentials: { username, password } });
+        }, { urls: ["<all_urls>"] });
+    }
+});
+
 chrome.runtime.onMessage.addListener((msg, sender) => {
     if (msg.action === 'applyProxy') {
         chrome.storage.local.get('proxyConfig', ({ proxyConfig }) => {
